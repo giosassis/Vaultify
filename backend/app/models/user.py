@@ -1,19 +1,19 @@
-from sqlalchemy import Column, Integer, String, DateTime, Text 
+from sqlalchemy import Column, String, DateTime, Text
 from sqlalchemy.orm import relationship
-from sqlalchemy.ext.declarative import declarative_base
-from app.database import Base 
-from app.utils.gen_usr_id import generate_user_id
 import datetime
-
+from .base import Base
 class User(Base):
     __tablename__ = "users"
-    id = Column(String(255), primary_key=True, index=True, default=generate_user_id)
+    id = Column(String(255), primary_key=True, index=True)
     email = Column(String(255), unique=True, index=True)
     password_hash = Column(Text, nullable=False)
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
     
     first_name = Column(String(255), nullable=True)
     last_name = Column(String(255), nullable=True)
-    
-    vaults = relationship("Vault", back_populates="user")
-    
+
+    # Importação da classe Vault na hora do relacionamento
+    def __init__(self, *args, **kwargs):
+        from app.models.vault import Vault  # Importação tardia
+        self.vaults = relationship("Vault", back_populates="user", cascade="all, delete-orphan")
+        super().__init__(*args, **kwargs)
