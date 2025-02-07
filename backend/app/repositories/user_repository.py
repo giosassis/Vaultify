@@ -28,7 +28,7 @@ class UserRepository:
             new_user = User(
                 id=generate_user_id(),
                 email=user_data.email,
-                password_hash=hash_password(user_data.password),
+                password_hash=user_data.password,
                 first_name=user_data.first_name,
                 last_name=user_data.last_name,
                 created_at=get_current_utc_time()
