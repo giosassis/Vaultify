@@ -1,11 +1,11 @@
 
-# Vaultify 🔒
+# Vaultify
 
 Vaultify is a password vault developed to help you manage your credentials safely and efficiently. Inspired by solutions like Dashlane, It offers a modern and intuitive interface and focuses on security and privacy. 
 
 ---
 
-## 🚀  Resources
+## Resources
 
 - **Safe Storage**: All passwords are encrypted before being saved on the database to ensure the highest level of security.
 - **Modern Interface**: The responsive dashboard is user-friendly and supports both light and dark modes for optimal visibility.
@@ -13,7 +13,7 @@ Vaultify is a password vault developed to help you manage your credentials safel
 - **Password Management**: Users can easily add, edit, and delete passwords and view all of their passwords in one place.
 - **Open-source**: The software is open-source, free of charge, and open to contributions for enhanced flexibility and collaboration.
 
-## 🛠  Technologies Used
+## Technologies Used
 
 ### Frontend
 - **React**: A Javascript library used to create user interface.
@@ -30,7 +30,7 @@ Vaultify is a password vault developed to help you manage your credentials safel
 - **Docker Compose**: Container orchestration
 - **phpMyAdmin**: Web interface for database management
 
-## 🖥  How to run the project locally
+## How to run the project locally
 
 ### Requirements 
 - Docker and Docker Compose instaled
@@ -67,8 +67,8 @@ Vaultify is a password vault developed to help you manage your credentials safel
 - Backend:`http://localhost:8000`
 
 
-## 🧩 Structure of the project
-```
+## Structure of the project
+```plain
 vaultify/
 ├── backend/              
 │   ├── main.py            
@@ -86,7 +86,7 @@ vaultify/
 └── README.md              
 
 ```
-## 🤝 How to contribute
+## How to contribute
 
 Contributions are welcome! Follow the steps below:
 
@@ -95,9 +95,6 @@ Contributions are welcome! Follow the steps below:
 - Commit your changes (git commit -m 'Add new feature').
 - Push to the branch (git push origin feature/nova-feature).
 - Open a pull request.
-
-
-
 
 ## License Type
 
